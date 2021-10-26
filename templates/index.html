@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <head>
+        <title>Home Page</title>
+    </head>
+    <body>
+        <div>{{content}}</div>
+
+        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+        <script>
+            var xValues = ["han","hon","den","det","denna","denne","hen"];
+            var yValues = [0.3285897036286657, 0.10895088184108678, 0.5775637029533235, 0.24841229642328372, 0.009477518896594716, 0.00238967245902491, 0.010529494272578509];
+            var barColors = ["red", "green","blue","orange","brown","black","brown"];
+            
+            new Chart("myChart", {
+              type: "bar",
+              data: {
+                labels: xValues,
+                datasets: [{
+                  backgroundColor: barColors,
+                  data: yValues
+                }]
+              },
+              options: {
+                legend: {display: false},
+                title: {
+                  display: true,
+                  text: "Frequencies of Swedish pronouns found on Twitter"
+                }
+              }
+            });
+            </script>
+    </body>
+</html>

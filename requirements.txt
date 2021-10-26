@@ -1,0 +1,8 @@
+pip3 install celery
+pip3 install json
+pip3 install os
+pip3 install re
+pip3 install json
+pip3 install itertools
+pip3 install collections
+pip3 install flask
